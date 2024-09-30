@@ -5,6 +5,14 @@ html {
 }
 
 .container {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2% 1%;
+  /* display: grid;
+  grid-template-columns: 300px 900px;
+  grid-template-rows: 100px 100px 500px 100px;
+  gap: 15px; */
   text-align: center;
   height: 100%;
   padding: 16px;
@@ -22,22 +30,27 @@ html {
 
 .header {
   background-color: #006157;
+  grid-column: 1 / 5;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-area: 2 / 1 / 8 / 2;
 }
 
 .nav {
   background-color: #642cde;
+  grid-area: 2 / 2 / 3 / 5;
 }
 
 .article {
   background-color: #7E1DC3;
+  grid-area: 3 / 2 / 8 / 5;
 }
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / 5;;
 }
 
 .article p {
