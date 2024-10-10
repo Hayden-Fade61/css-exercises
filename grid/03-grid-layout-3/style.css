@@ -89,3 +89,63 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+/* Soln */
+ul {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(15, 100px);
+  grid-template-columns: 1fr 4fr;
+}
+
+.header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.header ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: flex-start;
+}
+
+.logo {
+  text-align: left;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row: 2 / 15;
+  gap: 10px;
+}
+
+.nav {
+  grid-row: 2 / 3;
+  grid-column: 2 / -1;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.article {
+  --item-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--item-gap);
+  padding: var(--item-gap);
+  grid-row: 3 / 15;
+  grid-column: 2 / -1;
+}
+
+.footer{
+  grid-column: 1 / -1;
+}
