@@ -97,20 +97,25 @@ ul {
 
 .container {
   display: grid;
-  grid-template-rows: repeat(15, 100px);
   grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .header {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .header ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: flex-start;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
+.menu {
+  align-self: center;
 }
 
 .logo {
@@ -120,13 +125,22 @@ ul {
 .sidebar {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  grid-row: 2 / 15;
-  gap: 10px;
+  grid-row: 2 / 4;
+  gap: 50px;
+}
+
+.sidebar > * {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav {
   grid-row: 2 / 3;
   grid-column: 2 / -1;
+  align-self: center;
 }
 
 .nav ul {
@@ -138,12 +152,19 @@ ul {
 .article {
   --item-gap: 15px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--item-gap);
   padding: var(--item-gap);
-  grid-row: 3 / 15;
+  grid-row: 3 / 4;
   grid-column: 2 / -1;
+}
+
+.card {
+  height: 200px;
+}
+
+.card * {
+  padding: 5px;
 }
 
 .footer{
